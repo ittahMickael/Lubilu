@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<!--
+	Overflow by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-18745157-3"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'UA-18745157-3');
+		</script>
+		<title>Lubilu.fr : prédire l'effet de votre véhicule </title>
+		<meta name="description" content="Lubilu.fr permet d'effectuer des modèles de prédiction à l'aide d'algorithmes avancés de Machine Learning">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="assurances, prédiction, véhicule, data, science, random forest, machine learning, model, Lubilu.fr, Lubilu, machine learning">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<h1>Mickaël ITTAH</h1>
+					<p>Projet CES-DS-2019-01</p>
+				</header>
+				<footer>
+					<a href="#modele" class="button style2 scrolly-middle">Choisissez le modèle du véhicule</a>
+				</footer>
+			</section>
+
+		<!-- Banner -->
+			<section id="banner">
+				<header>
+					<h2>Description du processus</h2>
+				</header>
+				<p>Cette application Web a pour but de visualiser les résultats de l'étude.<br />
+				Découvrez l'effet "véhicule" sur le coût moyen d'un sinistre automobile</p>
+				<footer>
+					<a href="#first" class="button style2 scrolly">Commencer</a>
+				</footer>
+			</section>
+
+		<!-- Feature 1 -->
+			<article id="first" class="container box style1 right">
+				<a href="#" class="image fit"><img src="images/pic01_m.jpg" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>Constitution <br />
+						de la BDD</h2>
+					</header>
+					<p>Première étape du projet : <br />
+					Extraction des données<br />
+					& Ajout des variables externes</p>
+				</div>
+			</article>
+
+		<!-- Feature 2 -->
+			<article class="container box style1 left">
+				<a href="#" class="image fit"><img src="images/pic02_m.jpg" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>Pré- processing</h2>
+					</header>
+					<p>Deuxième étape du projet : <br />
+					Retraitement des données, <br />
+					Etude de variables pertinentes<br />
+					& constitution base de test</p>
+				</div>
+			</article>
+
+		<!-- Portfolio -->
+			<article  class="container box style2">
+				<header>
+					<h2>Régression du Cout Moyen accident</h2>
+					<p>RandomForest sur les variables explicatives d'intêréts.<br/>
+					Segmentation par clustering<br/>
+					Validation des modèles</p>
+				</header>
+
+
+
+			</article>
+
+<!-- Modele -->
+			<article id="modele" class="container box style3">
+				<header>
+					<h2> Lancer le modèle de prédiction</h2>
+					<p>Renseigner ci-dessous les informations sur le véhicule à prédire</p>
+				</header>
+				<form action="/result" method="post">
+
+					<div class="row gtr-50">
+					<h4> Choix de la marque</h4>
+						<div class="col-12 col-6-mobile"><select name="marque" id="marque"> 
+								<option value="Renault">Renault</option>
+								<option value="Citroen">Citroen</option>
+								<option value="Peugeot">Peugeot</option>
+								<option value="Opel">Opel</option>
+								<option value="Volkswagen">Volkswagen</option>
+								<option value="Fiat">Fiat</option>
+								<option value="Audi">Audi</option>
+								<option value="BMW">BMW</option>
+								<option value="Ford">Ford</option>
+								<option value="Mercedes">Mercedes</option>
+								<option value="AUTRE">Autre</option>								
+
+						</select></div>								
+					<h4> Choix du type de carosserie</h4>
+						<div class="col-12 col-12-mobile"><select name="carosserie" id="carosserie">  
+						
+								<option value="Berline">Berline</option>
+								<option value="Break">Break</option>
+								<option value="Cabriolet/Coupe">Cabriolet Coupe</option>
+								<option value="CCI">Camping Car</option>
+								<option value="Espace">Espace</option>
+								<option value="Fourgon">Fourgon</option>
+								<option value="Fourgonnette">Fourgonnette</option>
+								<option value="TousTerrains">Tous Terrains</option>
+								<option value="Autres">Autre</option>
+								
+						</select></div>
+					<h4> Choix du type d'alimentation</h4>					
+						<div class="col-12 col-6-mobile"><select name="alimentation" id="alimentation">  
+								<option value="Essence">Essence</option>
+								<option value="Diesel">Diesel</option>
+								<option value="Autres">Autre</option>
+
+						</select></div>
+
+					<h4> Choix de la catégorie PTAC (kg) </h4>
+						<div class="col-12 col-6-mobile"><select name="pta" id="pta">
+								<option value="[895,1.41e+03]">Inférieur à 1410</option>
+								<option value="(1.41e+03,1.53e+03]">(1410,1530]</option>
+								<option value="(1.53e+03,1.62e+03]">(1530,1620]</option>
+								<option value="(1.62e+03,1.69e+03]">(1620,1690]</option>
+								<option value="(1.69e+03,1.78e+03]">(1690,1780]</option>
+								<option value="(1.78e+03,1.85e+03]">(1780,1850]</option>
+								<option value="(1.85e+03,1.94e+03]">(1850,1940]</option>
+								<option value="(1.94e+03,2.06e+03]">(1940,2060]</option>
+								<option value="(2.06e+03,2.32e+03]">(2060,2320]</option>
+								<option value="(2.32e+03,3.5e+03]">Supérieur à 2320</option>	
+						</select></div>
+
+
+					<h4> Choix de la présence du contrôle de stabilité</h4>
+						<div class="col-12 col-12-mobile"><select name="controleDS" id="controleDS">  
+								<option value="N">Non</option>
+								<option value="O">Oui</option>
+								<option value="NR">Non renseigné</option>
+								<option value="S">Système S</option>							
+						
+						
+						</select></div>
+					<h4> Choix de la catégorie de la vitesse maximale (km/h)</h4>
+						<div class="col-12 col-12-mobile"><select name="vitessemax" id="vitessemax">
+								<option value="[60,150]">Inférieur à 150</option>  
+								<option value="(150,160]">(150,160]</option>
+								<option value="(160,163]">(160,163]</option>
+								<option value="(163,170]">(163,170]</option>						
+								<option value="(170,175]">(170,175]</option>
+								<option value="(175,180]">(175,180]</option>
+								<option value="(180,185]">(180,185]</option>						
+								<option value="(185,191]">(185,191]</option>
+								<option value="(191,203]">(191,203]</option>
+								<option value="(203,329]">Supérieur à 203</option>						
+								
+
+						</select></div>
+					<h4> Choix de la longueur du véhicule (nombre) </h4>
+						<div class="col-12 col-12-mobile"><input type="number" class="float" name="longueurmm" placeholder="Longueur en millimètres" value="4230" /></div>
+
+						<div class="col-12">
+							<ul class="actions">
+								<li><input type="submit" value="Prédire" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</article>
+
+
+
+
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="mailto:contact@lubilu.fr" class="fa fa-envelope"></a></li>
+				<li><a href="https://www.linkedin.com/in/mickaelittah/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; 2020 Mitt@h. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

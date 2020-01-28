@@ -1,0 +1,66 @@
+
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-18745157-3"></script>
+		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'UA-18745157-3');
+		</script>
+		<title>Lubilu.fr : prédire l'effet de votre véhicule </title>
+		<meta name="description" content="Lubilu.fr permet d'effectuer des modèles de prédiction à l'aide d'algorithmes avancés de Machine Learning">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="assurances, prédiction, véhicule, data, science, random forest, machine learning, model, Lubilu.fr, Lubilu, machine learning">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+
+				<header>
+					<h2>Résultat de la prédiction</h2>
+				</header>
+					<h3>Estimation Effet "Véhicule"</h3><br>	
+					<small align="left">Effet véhicule : {{result}}</small> <br><br>							
+					<h3>Commentaires </h3><br>	
+					<small align="left">Le résultat ci-dessus est estimé à partir d'un modèle entrainé sur des données. Le prédicteur utilisé est un modèle de régréssion de type Random Forest. <br> Les informations entrées par l'utilisateur permettent de prédire, pour un nouveau véhicule, l'effet "véhicule" du montant des sinistres.</small><br>
+					
+					<h3>Features Importances</h3><br><br>
+					<img src="images/importance_plot.png" width="900">
+				<footer>
+						<a  href="/#modele" class="button style2 scrolly-middle">Tester un autre véhicule</a>
+				</footer>
+			</section>
+
+
+
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="mailto:contact@lubilu.fr" class="fa fa-envelope"></a></li>
+				<li><a href="https://www.linkedin.com/in/mickaelittah/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; 2020 Mitt@h. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
